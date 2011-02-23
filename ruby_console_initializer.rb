@@ -1,3 +1,5 @@
+require 'rubygems'
+
 class Object
 
   ANSI_BOLD  = "\033[1m"
