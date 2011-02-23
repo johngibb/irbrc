@@ -1,4 +1,12 @@
 class Object
+
+  ANSI_BOLD  = "\033[1m"
+  ANSI_RESET = "\033[0m"
+  ANSI_LGRAY = "\033[0;37m"
+  ANSI_GRAY  = "\033[1;30m"
+  ANSI_BLUE  = "\033[1;33m"
+  ANSI_RED   = "\033[1;32m"
+  
   def pm(*options) # Print methods
     methods = self.methods
     methods -= Object.methods unless options.include? :more
@@ -22,7 +30,7 @@ class Object
     max_name = data.collect {|item| item[0].size}.max
     max_args = data.collect {|item| item[1].size}.max
     data.each do |item| 
-      print "#{ANSI_LGRAY}#{item[0].rjust(max_name)}#{ANSI_RESET}"
+      print "#{ANSI_GRAY}#{item[0].rjust(max_name)}#{ANSI_RESET}"
       print "#{ANSI_BLUE}#{item[1].ljust(max_args)}#{ANSI_RESET}"
       print "#{ANSI_RED}#{item[2]}#{ANSI_RESET}\n"
     end
