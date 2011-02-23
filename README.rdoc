@@ -82,4 +82,6 @@ Class
 
 == Copyright
 
+Forked by John Gibb
+
 Copyright (c) 2010 Rafael Magaña. See LICENSE for details.
