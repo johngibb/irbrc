@@ -39,6 +39,13 @@ class Object
 end
 #########################
 
+#history
+IRB.conf[:SAVE_HISTORY] = 100
+IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb_history"
+
+IRB.conf[:AUTO_INDENT] = true
+IRB.conf[:PROMPT_MODE] = :SIMPLE
+
 # Loaded when we fire up the Rails console
 # among other things I put the current environment in the prompt
 
