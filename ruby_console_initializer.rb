@@ -126,6 +126,7 @@ class Object
   def paste(pboard=:general)
     %x[pbpaste -pboard #{pboard.to_s}].chomp
   end
+  alias :pb, :paste
   
   def to_find
     self.to_pb :find
