@@ -48,6 +48,27 @@ if defined? Rails && defined? Rails.env
   }
   
   IRB.conf[:PROMPT_MODE] = :RAILS
+    
+  ### RAILS SPECIFIC HELPER METHODS
+  # TODO: DRY this out
+  def log_ar_to (stream)
+    ActiveRecord::Base.logger = expand_logger stream
+    nil
+  end
+
+  def log_ac_to (stream)
+    logger = expand_logger stream
+    ActionController::Base.logger = expand_logger stream
+    reload!
+  end
+  
+  def nosql
+    log_ar_to nil
+  end
+  
+  def sql
+    log_ar_to STDOUT
+  end
   
   #Redirect log to STDOUT, which means the console itself
   IRB.conf[:IRB_RC] = Proc.new do
