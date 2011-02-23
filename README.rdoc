@@ -12,19 +12,6 @@ or you can symlink it from other folder like this:
 
 == Contents
 
-=== Loaded libraries
-
-* rubygems (http://www.rubygems.com)
-* Wirble (http://pablotron.org/software/wirble/)
-* pp (http://www.ensta.fr/~diam/ruby/online/ruby-doc-stdlib/libdoc/pp/rdoc/index.html)
-* irb/ext/save-history (http://ruby-doc.org/core/files/lib/irb/ext/save-history_rb.html)
-* ap (http://github.com/michaeldv/awesome_print)
-* mush (http://github.com/rafmagana/mush)
-
-=== History
-
-You'll need to create a file called .irb-save-history in your home directory for this to work
-
 === Prompt
 
 I use a simple prompt for the IRb sessions
@@ -48,11 +35,6 @@ This will print the log in the console.
 
 clear 	- clear the screen
 ri		- it's a wrapper to the ri command-line ruby documentation utility
-
-=== Rails-specific Helper methods
-
-log_ar_to :record - Change the ActiveRecord's logger to log/record.log
-log_ac_to :controller - Change the ActiveController's logger to log/controller.log
 
 === Core Extensions
 
