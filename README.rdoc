@@ -8,7 +8,7 @@ Place it in your home directory (~/.irbrc)
 or you can symlink it from other folder like this:
 	
 	$ cd ~ (or 'cd')
-	$ ln -s folder/where/you/cloned/this/repo/irbrc/dot_irbrc .irbrc
+	$ ln -s folder/where/you/cloned/this/repo/irbrc/ruby_console_initializer.rb .irbrc
 
 == Contents
 
