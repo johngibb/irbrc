@@ -34,8 +34,8 @@ end
 # Loaded when we fire up the Rails console
 # among other things I put the current environment in the prompt
 
-if ENV['RAILS_ENV']
-  rails_env = ENV['RAILS_ENV']
+if defined? Rails && defined? Rails.env
+  rails_env = Rails.env
   rails_root = File.basename(Dir.pwd)
   prompt = "#{rails_root}[#{rails_env.sub('production', 'prod').sub('development', 'dev')}]"
   IRB.conf[:PROMPT] ||= {}
