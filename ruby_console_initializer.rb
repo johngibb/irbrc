@@ -183,3 +183,4 @@ end
 
 ### USEFUL ALIASES
 alias q exit
+alias rl reload! if Object.respond_to? :reload!
